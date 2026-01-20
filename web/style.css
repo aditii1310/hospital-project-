@@ -1,0 +1,335 @@
+/* ================== General Body ================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* ================== Header ================== */
+header {
+    background: linear-gradient(to right, #1e88e5, #1565c0);
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.admin-header {
+    background: linear-gradient(to right, #1e88e5, #1565c0);
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.doctor-header {
+    background: linear-gradient(to right, #ff7043, #d84315);
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* ================== Navigation ================== */
+nav, .admin-nav, .doctor-nav {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav a, .admin-nav a, .doctor-nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1b6dbb;
+    color: #fff;
+    padding: 15px 35px;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+nav a:hover, .admin-nav a:hover, .doctor-nav a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+.admin-nav a:hover {
+    background: linear-gradient(to right, #1e88e5, #1565c0);
+}
+
+.doctor-nav a {
+    background-color: #d84315;
+}
+
+.doctor-nav a:hover {
+    background: linear-gradient(to right, #ff7043, #d84315);
+}
+
+nav a i, .admin-nav a i, .doctor-nav a i {
+    margin-right: 8px;
+}
+
+/* ================== Section Titles ================== */
+h2, h3 {
+    text-align: center;
+    color: #1e88e5;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* ================== Admin Tables Styling ================== */
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto; /* center table */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+table th {
+    background: linear-gradient(to right, #1e88e5, #1565c0);
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+table tr {
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.01);
+}
+
+/* Table Buttons */
+table td button {
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 2px;
+}
+
+table td button[name="accept"] { background: #43a047; }
+table td button[name="reject"] { background: #e53935; }
+table td button[name="updateMessage"] { background: #1e88e5; }
+table td button[name="update"] { background: #1e88e5; }
+table td button[name="delete"] { background: #e53935; }
+
+table td button:hover { transform: scale(1.05); }
+
+/* ================== Doctor Dashboard Vertical Table / Cards ================== */
+.doctor-appointment-container {
+    display: flex;
+    flex-direction: column; /* vertical stacking */
+    gap: 15px;
+    width: 80%;
+    margin: 20px auto; /* center container */
+}
+
+.doctor-appointment-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.doctor-appointment-card:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transform: translateY(-3px);
+}
+
+.doctor-appointment-card h4 {
+    margin: 0;
+    font-weight: 600;
+    text-align: center;
+    color: #d84315;
+}
+
+.doctor-appointment-card p {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.doctor-appointment-card input[type="text"] {
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.doctor-appointment-card button {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: all 0.3s ease;
+}
+
+button[name="accept"] { background: #43a047; }
+button[name="reject"] { background: #e53935; }
+button[name="updateMessage"] { background: #1e88e5; }
+
+button:hover { transform: scale(1.05); }
+
+/* ================== Patient Dashboard / Cards ================== */
+.patient-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px auto;
+    width: 90%;
+}
+
+.patient-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 300px;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.patient-card:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transform: translateY(-3px);
+}
+
+.patient-card h4 {
+    margin: 0;
+    color: #1e88e5;
+    font-weight: 600;
+    text-align: center;
+}
+
+.patient-card p {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.patient-card input[type="text"],
+.patient-card input[type="email"],
+.patient-card input[type="password"] {
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.patient-card button {
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button[name="update"] {
+    background: linear-gradient(to right, #1e88e5, #1565c0);
+}
+button[name="delete"] {
+    background: linear-gradient(to right, #e53935, #b71c1c);
+}
+
+/* ================== Forms ================== */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="number"],
+form input[type="date"] {
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    width: 250px;
+    transition: all 0.3s ease;
+}
+
+form input:focus {
+    border-color: #1e88e5;
+    box-shadow: 0 0 8px rgba(30,136,229,0.5);
+    outline: none;
+}
+
+/* ================== Responsive ================== */
+@media screen and (max-width: 768px) {
+    nav, .admin-nav, .doctor-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a, .admin-nav a, .doctor-nav a {
+        width: 80%;
+        justify-content: center;
+    }
+
+    .doctor-appointment-card, .patient-card {
+        width: 90%;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="password"],
+    form input[type="number"],
+    form input[type="date"] {
+        width: 100%;
+    }
+
+    table {
+        width: 95%;
+    }
+}
