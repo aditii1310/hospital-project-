@@ -1,0 +1,96 @@
+/* General Page Styling */
+body {
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, #e3f2fd, #bbdefb);
+    color: #2c3e50;
+    font-size: 14px;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Links */
+a {
+    color: #1565c0;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover {
+    color: #0d47a1;
+    text-decoration: underline;
+}
+
+/* Table Base Style */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Table Headers */
+form.jsfcrud_list_form th,
+td th {
+    background: #1565c0;
+    color: white;
+    font-size: 13px;
+    padding: 10px;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+/* Table Cells */
+td {
+    padding: 10px;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Row Striping */
+tr.jsfcrud_even_row {
+    background-color: #f5f9ff;
+}
+tr.jsfcrud_odd_row {
+    background-color: #ffffff;
+}
+
+/* Hover Effect */
+tr:hover {
+    background-color: #e3f2fd;
+    transition: background-color 0.3s ease;
+}
+
+/* Busy Image Centering */
+#busyImage {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+    th {
+        background-color: #0d47a1;
+    }
+    td {
+        border: none;
+        border-bottom: 1px solid #ddd;
+        padding-left: 50%;
+        position: relative;
+    }
+    td:before {
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        white-space: nowrap;
+        font-weight: bold;
+        color: #1565c0;
+    }
+}

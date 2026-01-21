@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateFlightsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateFlightsLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{flightsController.selected.id}" title="#{bundle.CreateFlightsTitle_id}" required="true" requiredMessage="#{bundle.CreateFlightsRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.CreateFlightsLabel_airline}" for="airline" />
+                    <h:inputText id="airline" value="#{flightsController.selected.airline}" title="#{bundle.CreateFlightsTitle_airline}" />
+                    <h:outputLabel value="#{bundle.CreateFlightsLabel_flight}" for="flight" />
+                    <h:inputText id="flight" value="#{flightsController.selected.flight}" title="#{bundle.CreateFlightsTitle_flight}" />
+                    <h:outputLabel value="#{bundle.CreateFlightsLabel_sourceCity}" for="sourceCity" />
+                    <h:inputText id="sourceCity" value="#{flightsController.selected.sourceCity}" title="#{bundle.CreateFlightsTitle_sourceCity}" />
+                    <h:outputLabel value="#{bundle.CreateFlightsLabel_departureTime}" for="departureTime" />
+                    <h:inputText id="departureTime" value="#{flightsController.selected.departureTime}" title="#{bundle.CreateFlightsTitle_departureTime}" />
+                    <h:outputLabel value="#{bundle.CreateFlightsLabel_stops}" for="stops" />
+                    <h:inputText id="stops" value="#{flightsController.selected.stops}" title="#{bundle.CreateFlightsTitle_stops}" />
+                    <h:outputLabel value="#{bundle.CreateFlightsLabel_arrivalTime}" for="arrivalTime" />
+                    <h:inputText id="arrivalTime" value="#{flightsController.selected.arrivalTime}" title="#{bundle.CreateFlightsTitle_arrivalTime}" />
+                    <h:outputLabel value="#{bundle.CreateFlightsLabel_destinationCity}" for="destinationCity" />
+                    <h:inputText id="destinationCity" value="#{flightsController.selected.destinationCity}" title="#{bundle.CreateFlightsTitle_destinationCity}" />
+                    <h:outputLabel value="#{bundle.CreateFlightsLabel_class1}" for="class1" />
+                    <h:inputText id="class1" value="#{flightsController.selected.class1}" title="#{bundle.CreateFlightsTitle_class1}" />
+                    <h:outputLabel value="#{bundle.CreateFlightsLabel_duration}" for="duration" />
+                    <h:inputText id="duration" value="#{flightsController.selected.duration}" title="#{bundle.CreateFlightsTitle_duration}" />
+                    <h:outputLabel value="#{bundle.CreateFlightsLabel_daysLeft}" for="daysLeft" />
+                    <h:inputText id="daysLeft" value="#{flightsController.selected.daysLeft}" title="#{bundle.CreateFlightsTitle_daysLeft}" />
+                    <h:outputLabel value="#{bundle.CreateFlightsLabel_price}" for="price" />
+                    <h:inputText id="price" value="#{flightsController.selected.price}" title="#{bundle.CreateFlightsTitle_price}" />
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{flightsController.create}" value="#{bundle.CreateFlightsSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{flightsController.prepareList}" value="#{bundle.CreateFlightsShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateFlightsIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

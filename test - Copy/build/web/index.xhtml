@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Airflight_9117</title>
+        <!-- Link to the improved CSS -->
+        <h:outputStylesheet name="css/jsfcrud.css"/>
+    </h:head>
+
+    <h:body>
+        <h1 style="color:#1565c0; text-align:center; font-family:'Segoe UI', Arial;">Welcome to Airflight_9117</h1>
+        <p style="text-align:center;">Your gateway to all flight schedules and details</p>
+
+        <br />
+
+        <!-- Navigation Link -->
+        <div style="text-align:center; margin-bottom: 20px;">
+            <h:link outcome="/flights/List" value="Show All Flights Items" style="padding:10px 20px; background:#1565c0; color:white; border-radius:5px; text-decoration:none;"/>
+        </div>
+
+        <!-- Sample Table -->
+        <h:form styleClass="jsfcrud_list_form">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Flight No</th>
+                        <th>Origin</th>
+                        <th>Destination</th>
+                        <th>Time</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="jsfcrud_odd_row">
+                        <td>AI-101</td>
+                        <td>Mumbai</td>
+                        <td>Delhi</td>
+                        <td>08:30 AM</td>
+                        <td>On Time</td>
+                    </tr>
+                    <tr class="jsfcrud_even_row">
+                        <td>UK-927</td>
+                        <td>Delhi</td>
+                        <td>Mumbai</td>
+                        <td>02:00 PM</td>
+                        <td>Delayed</td>
+                    </tr>
+                </tbody>
+            </table>
+        </h:form>
+    </h:body>
+</html>

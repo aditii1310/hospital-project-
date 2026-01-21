@@ -1,0 +1,11 @@
+SMAP
+deletePatient_jsp.java
+JSP
+*S JSP
+*F
++ 0 deletePatient.jsp
+deletePatient.jsp
+*L
+1,35:47
+35:82
+*E

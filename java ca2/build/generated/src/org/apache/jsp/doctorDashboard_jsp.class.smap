@@ -1,0 +1,20 @@
+SMAP
+doctorDashboard_jsp.java
+JSP
+*S JSP
+*F
++ 0 doctorDashboard.jsp
+doctorDashboard.jsp
+*L
+1,211:47
+212,11:259
+222,2:270
+224,7:272,3
+231,2:293
+233:295,3
+234,8:298
+242:306,3
+243,5:309
+248,13:315
+260,11:328
+*E

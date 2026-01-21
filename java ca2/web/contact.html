@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Contact Us</h1>
+        
+        <form action="AppointmentServlet">
+            <label for='name'>Enter Name:</label>
+            <input type='text' name='t1' id='name' placeholder='Enter Name'>
+            <br><br>
+             <label for='email'>Enter Email:</label>
+            <input type='text' name='t2' id='email' placeholder="Enter Email">
+            <br><br>
+            <label for='phone'>Enter Phone:</label>
+            <input type='text' name='t2' id='email' placeholder="Enter Email">
+            <br><br>
+            <label for='Message'>Enter Message:</label>
+            <textarea name='t2' id='email' placeholder="Enter Message"></textarea>
+            <br><br>
+            <input type='submit' value='submit' onclick='message()'>
+        </form>
+        <script>
+            function message(){
+                alert(" Message Sent Succesfully")
+            }
+            </script>
+            
+    </body>
+</html>
