@@ -3,7 +3,8 @@
     String patientId = request.getParameter("patientId");
     String firstName = "", lastName = "", gender = "", phoneNumber = "", address = "";
 
-    try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalsystem?useSSL=false&allowPublicKeyRetrieval=true", "root", "root75");
+    try (Connection conn = DriverManager.getConnection(""mysql://Mndze4tcXSTdFLv.root:rCXtq7k88ADL6iJ3
+6@gateway01.ap-southeast-1.prod.aws.tidbcloud.com:4000/hospital_db", "Mndze4tcXSTdFLv.root", "rCXtq7k88ADL6iJ3");
          PreparedStatement stmt = conn.prepareStatement("SELECT * FROM patients WHERE patient_id = ?")) {
         
         stmt.setString(1, patientId);
